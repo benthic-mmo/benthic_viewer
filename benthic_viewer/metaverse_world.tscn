@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpsob4ctdg0eh"]
+
+[ext_resource type="PackedScene" uid="uid://dhdyirqyg6s8x" path="res://Chat/chat.tscn" id="1_0bq6s"]
+[ext_resource type="Script" uid="uid://q2hdxm0p4ex6" path="res://metaverse_world.gd" id="1_mc0ok"]
+[ext_resource type="Script" uid="uid://bs85hlcxi62nm" path="res://addons/orbit_camera/orbit_camera.gd" id="3_7j7bs"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_mc0ok")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Chat" parent="CanvasLayer" instance=ExtResource("1_0bq6s")]
+offset_right = -798.0
+
+[node name="Camera" type="Node3D" parent="."]
+
+[node name="CameraAnchor" type="Node3D" parent="Camera"]
+
+[node name="OrbitCamera" type="Camera3D" parent="Camera/CameraAnchor"]
+script = ExtResource("3_7j7bs")
+SCROLL_SPEED = 2.0
+DEFAULT_DISTANCE = 1.0
+ROTATE_SPEED = 2.0
+ANCHOR_NODE_PATH = NodePath("..")
+metadata/_custom_type_script = "uid://bs85hlcxi62nm"

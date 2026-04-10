@@ -9,7 +9,7 @@ func _on_login_response(success, message):
 	var loading = get_tree().root.find_child("Loading", true, false)
 	loading.hide()
 	if success == "Success":
-		metaverse_session.switch_to_scene("res://Chat/chat.tscn")
+		metaverse_session.switch_to_scene("res://metaverse_world.tscn")
 	else:
 		var error = get_tree().root.find_child("Error", true, false)
 		error.text = message

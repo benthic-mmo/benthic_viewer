@@ -15,7 +15,8 @@ godot = "0.2.3"
 log = "0.4.26"
 
 metaverse_messages = {path = "../../metaverse_client/crates/messages/"}
-metaverse_session = {path = "../../metaverse_client/crates/session/"}
+metaverse_core = {path = "../../metaverse_client/crates/core/"}
 portpicker = "0.1.1"
 tempfile = "3.17.1"
 tokio = { version = "1.14.0", features = ["full"] }
+serde_json = "1.0.149"
